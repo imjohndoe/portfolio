@@ -8,6 +8,10 @@ body {
   color: rgb(var(--bs-tertiary-color-rgb));
 }
 
+p{
+  padding: 0;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -26,6 +30,7 @@ body {
   height: 32rem;
 }
 
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -36,22 +41,23 @@ body {
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 /* rtl:end:ignore */
+
 
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 4rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
 .featurette-heading {
-  letter-spacing: -0.05rem;
+  letter-spacing: -.05rem;
 }
 
 /* rtl:end:remove */
@@ -68,25 +74,16 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 1rem;
   }
 }
-
-.container_projects {
-  border: 1px solid black;
-  padding: 100px 100px;
-  margin: 0px;
-  text-align:center;
+.text-body-secondary {
+  font-size: 1rem;
 }
 
-.about-link {
-  font-size: 18px;
-  padding: 5px;
-  border: 2px solid black;
-}

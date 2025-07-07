@@ -12,167 +12,489 @@
   </head>
 
   <body>
-    <!-- 🔥 Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">막믈리애's Portfolio</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#About">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Contact">Contact</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="개발중인 서비스"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
-    <!-- 📦 Marketing Section -->
-    <div class="container marketing my-5">
-      <div class="row">
-        <div class="col-lg-4 text-center">
-          <img
-            aria-label="Placeholder"
-            class="bd-placeholder-img rounded-circle"
-            src="about.png"
-            alt="about"
-            width="225"
-          />
-          <h2>About me</h2>
-          <a href="#About" class="btn btn-outline-secondary">hello world!</a>
-        </div>
-        <div class="col-lg-4 text-center">
-          <img
-            aria-label="Placeholder"
-            class="bd-placeholder-img rounded-circle"
-            src="project.png"
-            alt="project"
-            width="250"
-          />
-          <h2>Projects</h2>
-          <a href="#Projects" class="btn btn-outline-secondary"
-            >그동안의 작업물들</a
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
           >
-        </div>
-        <div class="col-lg-4 text-center">
-          <img
-            aria-label="Placeholder"
-            class="bd-placeholder-img rounded-circle"
-            src="contact.png"
-            alt="contact"
-            width="200"
-          />
-          <h2>Contact.</h2>
-          <a href="#Contact" class="btn btn-outline-secondary"
-            >함께 하고 싶으세요?</a
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
           >
-        </div>
-        <!-- nav의 About클릭시 위치는 아래 About항목임 -->
-        <section id="About"></section>
-      </div>
-    </div>
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">막믈리애's Portfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+            </ul>
+              <form class="d-flex" role="search" onsubmit="return goGPTSearch()">
+              <input
+                id="searchInput"
+                class="form-control me-2"
+                type="search"
+                placeholder="search!"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
 
-    <!-- 🚀 container section 1 -->
-    <div class="container">
-      <hr />
-      <br class="row featurette" />
-      <div class="col-md-10">
-        <h2>
-          About.
-          <span class="text-muted">1인 개발자가 되고 싶은 창업가 막믈리애</span>
-        </h2>
-      </div>
-      <div>
-        <p>
-          막걸리를 너무 좋아해서 끊지 못해 고생중인(사실 끊을 생각없는) 막러버
-        </p>
-        <p>
-          25년도 중순 직무 전환을 꿈구며 1인 창업개발자를 공부중인 코린이
-          랍니다.
-        </p>
-      </div>
-      <div class="col-md-5">
-        <!-- Replace with your image -->
-        <img src="mak.png" alt="mak" width="200" />
-      </div>
-      <!-- nav의 Projects클릭시 위치는 아래 Projects항목임 -->
-      <br />
-      <section id="Projects"></section>
-
-      <!-- 🚀 container section 2 -->
-      <div class="container">
-        <hr />
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2>
-              Projects.
-              <span class="text-muted">1인개발 & 협업작</span>
-            </h2>
-            <div class="section">
-              <div class="container_projects">
-                <img src="..." class="card-img-top" alt="." />
-              </div>
-              <p>개발교육 후 첫번째 프로젝트</p>
-              <div class="container_projects">
-                <img src="..." class="card-img-top" alt="." />
-              </div>
-              <p>두번째 프로젝트 - web & js를 이용한 환경 및 설정 구축</p>
-              <div class="container_projects">
-                <img src="..." class="card-img-top" alt="." />
-              </div>
-              <p>세번째 프로젝트 - 현재 진행형</p>
-            </div>
-
-            <div class="col-md-5"></div>
+            <script>
+            function goGPTSearch() {
+              const query = document.getElementById('searchInput').value.trim();
+              if (query) {
+                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(searchUrl, '_blank');  // 새 창으로 열기
+              }
+              return false; // 폼 제출 막기
+            }
+            </script>
           </div>
-          <!-- nav의 Contact클릭시 위치는 아래 Contact항목임 -->
-          <br />
-          <section id="Contact"></section>
         </div>
-        <hr />
+      </nav>
+    </header>
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              src="title1.png"
+            >
+          </img>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>welcome my world!</h1>
+                <p class="opacity-75">
+                 Thank you for stopping by my developer portfolio site!
+                </p>
+                <p>
+                  <!-- 버튼을 활성화 시키고 싶은데 , 구현할 수 있는 아이디어가 없음 -->
+                  <!-- <a class="btn btn-lg btn-primary" href="#">아직 구현하지 못함</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>
+                  Some representative placeholder content for the second slide
+                  of the carousel.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Some representative placeholder content for the third slide of
+                  this carousel.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <!-- 🚀 Contact 항목 -->
-      <div class="container">
-        <div class="row featurette">
-          <div class="col-md-10">
-            <h2>
-              Contact
-              <span class="text-muted">협업&프로젝트 기획</span>
-            </h2>
-            <p class="lead">
-              아래 서식을 통해 연락처를 남겨 주시면 확인후 연락드겠습니다☺️
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img
+              aria-label="about-me"
+              class="bd-placeholder-img rounded-circle"
+              height="140"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="140"
+              src="about.png"
+            >
+              <title>About me</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </img>
+            <h2 class="fw-normal">About me</h2>
+            <p>hello world!</p>
+            <p>
+              <a class="btn btn-secondary" href="#About">hello &raquo;</a>
             </p>
           </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              aria-label="Projects"
+              class="bd-placeholder-img rounded-circle"
+              height="140"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="140"
+              src="project.png"
+            >
+              <title>Projects</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </ㅎ>
+            <h2 class="fw-normal">Projects</h2>
+            <p>
+              Projects & Ing
+            </p>
+            <p>
+              <a class="btn btn-secondary" href="#Projects">Look! &raquo;</a>
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              aria-label="Placeholder"
+              class="bd-placeholder-img rounded-circle"
+              height="140"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="140"
+              src="contact.png"
+            >
+              <title>Contact</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </img>
+            <h2 class="fw-normal">Contact</h2>
+            <p>
+            함께 하고 싶으세요?
+            </p>
+            <p>
+              <a class="btn btn-secondary" href="#Contact">I want you! &raquo;</a>
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div >
+                <!-- nav의 About클릭시 위치는 아래 About항목임 -->
+        <section id="About"></section>
+        <!-- /.row -->
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider"/>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <class class="featurette-heading fw-normal lh-1"></class>
+            <h2 class="featurette-heading fw-normal lh-1">
+              1인 개발자가 되고 싶은 창업가 막믈리애
+              <span class="text-body-secondary"></span>
+            </h2>
+            <br>
+            <p class="lead">
+              막걸리를 너무 좋아해서 끊지 못해 고생중인
+             (사실 끊을 생각없는) Maklover
+            </p>
+            <p></p>
+             <p>25년도 중순 직무 전환을 꿈구며 1인 창업개발자를 공부중인 코린이
+          입니다.</p>
+          <P>작업을 할때는 평소 음악듣는걸 좋아해서 음악을 켜놓고 작업을 한답니다.</P>
+          <P>jazz , lofi , house etc...(음악 추천은 대환영)</P>
+          <p>운동을 좋아하지만 술도 좋아해서 잘 안빠지네요</p>
+          </div>
+          <div class="col-md-5">
+            <img
+              aria-label="Placeholder: 500x500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              height="500"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="500"
+              src="mak.png"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                "절주나 금주 방법을 아시나요?"
+              </text>
+          </div>
+          <!-- nav의 Projects클릭시 위치는 아래 Projects항목임 -->
+          <br />
+          <section id="Projects"></section>
+
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              1인개발 & 작업물
+              <span class="text-body-secondary">coding projects</span>
+            </h2>
+            <p class="lead">
+              2025. 07 :개발교육 중 만들고 있는 자료들입니다.
+            </p>
+            <p class="lead">
+              2025. 07 ~ :1개월마다 새로 만들어 지는 작업을 업로드하려합니다.
+            </p>
+            <p class="lead">
+              비즈니스 아이템 컨셉을 구상중입니다.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img
+              aria-label="Placeholder: 500x500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              height="500"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="500" 
+              src="projects-1.png"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <p x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                <p>개발교육 과정중 만들고 있는 포트폴리오 자료</p>
+                <P>vs코드와 bootstrap 프레임워크를 사용합니다.</P>
+              </text>
+              <hr class="featurette-divider" />
+              <img
+              aria-label="Placeholder: 500x500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              height="500"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="500" 
+              src="projects-2.png"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <p x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                <p>vs코드 , html 을 이용한 register 페이지 입니다.</p>
+              </text>
+              <hr class="featurette-divider" />
+              <img
+              aria-label="Placeholder: 500x500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              height="500"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              width="500" 
+              src="something.png"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <p x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                <p>세번째 프로젝트를 기대하며,열심히 공부하고 있습니다.</p>
+              </text>
+          </div>
         </div>
-        <div class="col-md-5">
-          <label for="validationCustom01" class="form-label">이름</label>
+                  <!-- nav의 Contact클릭시 위치는 아래 Contact항목임 -->
+          <br />
+          <section id="Contact"></section>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Contact.
+              <span class="text-body-secondary">협업&프로젝트 기획</span>
+            </h2>
+            <p class="lead">
+            아래 서식을 통해 연락처를 남겨 주세요
+            </p>
+          <div class="col-md-5">
+          <label for="customer-id" class="form-label">이름</label>
           <input
             type="text"
             class="form-control"
@@ -181,7 +503,7 @@
           />
         </div>
         <div class="col-md-5">
-          <label for="validationCustomemail" class="form-email">Email</label>
+          <label for="customer-email" class="form-email">Email</label>
           <div class="input-group has-validation">
             <input
               type="email"
@@ -191,16 +513,17 @@
               required
             />
           </div>
-          <div class="col-md-7">
-            <label for="validationCustom03" class="form-label">연락처</label>
+          <div class="col-md-12">
+            <label for="customer-phone" class="form-label">연락처</label>
             <input
               type="text"
               class="form-control"
               id="validationCustom03"
               placeholder="010-xxxx-xxxx"
-              required
-            />
-            <label for="validationCustom04" class="form-label">문의 내용</label>
+              required>
+          </div>
+          
+            <label for="customer-request" class="form-request">문의 내용</label>
             <select class="form-select" id="validationCustom04" required>
               <option selected disabled value="">선택해주세요</option>
               <option>기획&제작</option>
@@ -224,23 +547,36 @@
               <div class="invalid-feedback">
                 You must agree before submitting.
               </div>
-            </div>
-          </div>
-          <br />
-          <div class="col-12">
-            <button class="btn btn-primary" type="submit">제출하기</button>
+              <br>
+            </br>
+              <div class="col-5">
+                <button class="btn btn-primary" type="submit">제출하기</button>
+              </div>
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+            </svg>
           </div>
         </div>
       </div>
-      <hr />
-    </div>
-
-    <!-- 🔗 Footer -->
-    <footer class="container py-4">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>&copy; 2025 MySite, Inc.</p>
-    </footer>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- /.container -->
+      <hr class="featurette-divider" />
+      <!-- /END THE FEATURETTES -->
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>
+          &copy; 2025 Company, Inc. &middot;
+          <a href="#">licoshome</a> &middot; <a href="#">Terms</a>
+        </p>
+      </footer>
+    </main>
+    <script
+      src="../assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
   </body>
 </html>
